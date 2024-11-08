@@ -22,6 +22,7 @@ struct List_t
     int        size;
     int        capacity;
     int        free;
+    FILE*      dump;
 };
 
 #endif

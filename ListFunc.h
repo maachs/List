@@ -9,6 +9,8 @@ int ListPop(List_t* list, int index);
 
 int InitList(List_t* list);
 
+int ListDump(List_t* list, char** argv);
+
 int ListDtor(List_t* list);
 
 #endif

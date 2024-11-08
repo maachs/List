@@ -5,11 +5,20 @@ flags = -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equa
 list: a.exe
 	a.exe Dump.dot
 
-a.exe: main.o
-	g++ main.o
+a.exe: main.o PushPop.o InitDtor.o Dump.o
+	g++ main.o PushPop.o InitDtor.o Dump.o
 
 main.o: main.cpp
 	g++ -c $(flags) main.cpp
+
+PushPop.o: PushPop.cpp
+	g++ -c $(flags) PushPop.cpp
+
+InitDtor.o: InitDtor.cpp
+	g++ -c $(flags) InitDtor.cpp
+
+Dump.o: Dump.cpp
+	g++ -c $(flags) Dump.cpp
 
 clean:
 	rm -rf *.o *.exe
