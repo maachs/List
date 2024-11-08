@@ -44,14 +44,14 @@ int ListDump(List_t* list, char** argv)
 
     fprintf(list->dump, "info -> %d;\n", list->free);
 
-    fprintf(list->dump, "   edge[color=\"fuchsia\"];\n");
+    fprintf(list->dump, "   edge[color=\"forestgreen\"];\n");
 
     for (int i = 0; i < list->capacity; ++i)
     {
         fprintf(list->dump, "%4d -> %d;\n", i, list->data[i].next);
     }
 
-    fprintf(list->dump, "   edge[color=\"blue\"];\n");
+    fprintf(list->dump, "   edge[color=\"firebrick4\"];\n");
 
     for (int i = 0; i < list->capacity; ++i)
     {

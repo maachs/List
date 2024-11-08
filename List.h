@@ -25,4 +25,16 @@ struct List_t
     FILE*      dump;
 };
 
+#define LIST_PUSH(var1, var2)           \
+    if(ListPush(&list, var1, var2) != 0)\
+    {                                   \
+        return -1;                      \
+    }
+
+#define LIST_POP(var)           \
+    if(ListPop(&list, var) != 0)\
+    {                           \
+        return -1;              \
+    }
+
 #endif

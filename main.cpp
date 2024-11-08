@@ -17,12 +17,12 @@ int main(int argc, char** argv)
         return -1;
     }
 
-    ListPush(&list, 0, 10);
-    ListPush(&list, 1, 20);
-    ListPush(&list, 2, 30);
-    //ListPop(&list, 1);
-    ListPush(&list, 3, 40);
-    //ListPop(&list, 2);
+    LIST_PUSH(0, 10);
+    LIST_PUSH(1, 20);
+    LIST_PUSH(2, 30);
+    LIST_PUSH(3, 40);
+    LIST_POP(1);
+    LIST_POP(2);
 
     ListDump(&list, argv);
 
